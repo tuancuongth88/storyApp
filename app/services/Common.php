@@ -11,6 +11,10 @@ class Common {
 				'data' => $data,
 			]);
 	}
+	public static function returnDataNotUser($data = null)
+	{
+		return Response::json(['data' => $data]);
+	}
 	public static function getSessionId($input, $userId)
 	{
 		$device = User::where('user_id', $userId)

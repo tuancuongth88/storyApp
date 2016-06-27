@@ -11,7 +11,7 @@ class ApiCategoryController extends ApiController {
 	{
 		// dd(123);
 		$input = Input::all();
-		return Common::returnData(200, SUCCESS, $input['user_id'], $input['session_id'], Common::getCategoryWithLike($input));
+		return Common::returnDataNotUser( Common::getCategoryWithLike($input));
 	}
 
 
