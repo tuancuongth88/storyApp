@@ -26,6 +26,7 @@ Route::group(['prefix' => 'admin'], function () {
 	Route::resource('/story', 'StoryController');
 }
 });
+
 Route::group(['prefix' => 'api'], function () {
 	Route::get('/login', 'LoginController@getLogin');
 	Route::post('/login', 'LoginController@postLogin');
@@ -35,6 +36,7 @@ Route::group(['prefix' => 'api'], function () {
 
 	//category
 	Route::post('/category', 'ApiCategoryController@index');
+
 
 });
 
